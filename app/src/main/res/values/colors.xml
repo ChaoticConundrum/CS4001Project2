@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="accelBackground">#AAAAAA</color>
+
+    <color name="error">#CC0000</color>
 </resources>

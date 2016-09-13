@@ -1,4 +1,4 @@
-package com.example.cawate14.accelerometer;
+package com.example.cawate14.cs4001project2;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,9 +15,10 @@ public class AccelerometerHandler extends Observable implements SensorEventListe
     private Sensor accelerometer = null;
 
     public AccelerometerHandler(Activity activity) {
+        // Setup accelerometer manger
         sensorManager = (SensorManager) activity.getSystemService(Context.SENSOR_SERVICE);
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-
+        // This is the listener
         sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_UI);
     }
 

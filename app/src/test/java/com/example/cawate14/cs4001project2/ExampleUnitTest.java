@@ -1,4 +1,4 @@
-package com.example.cawate14.accelerometer;
+package com.example.cawate14.cs4001project2;
 
 import org.junit.Test;
 

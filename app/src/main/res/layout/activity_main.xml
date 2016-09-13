@@ -7,16 +7,16 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.cawate14.accelerometer.MainActivity"
+    tools:context="com.example.cawate14.cs4001project2.MainActivity"
     android:gravity="center">
 
     <TableLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TableRow
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
@@ -27,8 +27,9 @@
                 android:text="@string/x" />
             <TextView
                 android:id="@+id/x"
-                android:layout_width="@dimen/default_width"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:textSize="@dimen/default_text_size"
                 android:padding="@dimen/default_padding"
                 android:background="@color/accelBackground"
@@ -36,7 +37,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
@@ -47,8 +48,9 @@
                 android:text="@string/y" />
             <TextView
                 android:id="@+id/y"
-                android:layout_width="@dimen/default_width"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:textSize="@dimen/default_text_size"
                 android:padding="@dimen/default_padding"
                 android:background="@color/accelBackground"
@@ -56,7 +58,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
@@ -67,8 +69,53 @@
                 android:text="@string/z" />
             <TextView
                 android:id="@+id/z"
-                android:layout_width="@dimen/default_width"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/default_text_size"
+                android:padding="@dimen/default_padding"
+                android:background="@color/accelBackground"
+                android:text="0" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/latlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/default_text_size"
+                android:padding="@dimen/default_padding"
+                android:text="@string/latitude" />
+            <TextView
+                android:id="@+id/latitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/default_text_size"
+                android:padding="@dimen/default_padding"
+                android:background="@color/accelBackground"
+                android:text="0" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/lnglabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/default_text_size"
+                android:padding="@dimen/default_padding"
+                android:text="@string/longitude" />
+            <TextView
+                android:id="@+id/longitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:textSize="@dimen/default_text_size"
                 android:padding="@dimen/default_padding"
                 android:background="@color/accelBackground"
