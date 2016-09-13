@@ -2,7 +2,6 @@ package com.example.cawate14.cs4001project2;
 
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 
 import java.util.Observable;
 import java.util.Observer;
-import java.util.jar.Manifest;
 
 public class MainActivity extends AppCompatActivity implements Observer {
 
@@ -36,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // View handles
         x_axis = (TextView)findViewById(R.id.x);
         y_axis = (TextView)findViewById(R.id.y);
         z_axis = (TextView)findViewById(R.id.z);
@@ -44,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
         latitude = (TextView)findViewById(R.id.latitude);
         longitude = (TextView)findViewById(R.id.longitude);
 
+        // Save default color for later
         defaultTextColor = x_axis.getTextColors().getDefaultColor();
 
         // Setup accelerometer handler
@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
         switch (requestCode){
             case PERMISSION_REQUEST_FINE_LOCATION:
+                // Check for success
                 if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
                     // Setup location handler
                     locationHandler = new LocationHandler(this);

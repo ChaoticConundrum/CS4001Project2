@@ -20,6 +20,7 @@ public class LocationHandler extends Observable implements LocationListener {
             // This is the listener
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
         } catch(SecurityException e) {
+            // Just in case
             locationManager = null;
         }
     }
@@ -31,13 +32,14 @@ public class LocationHandler extends Observable implements LocationListener {
             setChanged();
             notifyObservers(lastKnown);
         } catch(SecurityException e) {
+            // Just in case
             locationManager = null;
         }
     }
 
     @Override
     public void onLocationChanged(Location location) {
-        // Notify observing avtivity
+        // Notify observing activity
         setChanged();
         notifyObservers(location);
     }
