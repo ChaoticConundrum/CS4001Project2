@@ -98,17 +98,17 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
     @Override
     public void update(Observable observable, Object o) {
-        if(observable == accelerometerHandler) {
+        if(observable instanceof AccelerometerHandler) {
             // Update acceleration
             float[] xyz = (float[]) o;
             x_axis.setText(Float.toString(xyz[0]));
             y_axis.setText(Float.toString(xyz[1]));
             z_axis.setText(Float.toString(xyz[2]));
-        } else if(observable == locationHandler){
+        } else if(observable instanceof LocationHandler){
             // Update location
             Location location = (Location) o;
-            latitude.setText(Double.toString(((Location) o).getLatitude()));
-            longitude.setText(Double.toString(((Location) o).getLongitude()));
+            latitude.setText(Double.toString(location.getLatitude()));
+            longitude.setText(Double.toString(location.getLongitude()));
         }
     }
 }

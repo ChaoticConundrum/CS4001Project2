@@ -29,8 +29,10 @@ public class LocationHandler extends Observable implements LocationListener {
         try {
             // Get the last known location to display immediately
             Location lastKnown = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            setChanged();
-            notifyObservers(lastKnown);
+            if(lastKnown != null) {
+                setChanged();
+                notifyObservers(lastKnown);
+            }
         } catch(SecurityException e) {
             // Just in case
             locationManager = null;
